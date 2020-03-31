@@ -5,18 +5,30 @@ const $form = document.getElementsByTagName('form')[0];
 
 const calcularTotalPorPersona = (event) => {
     event.preventDefault();
+
     const totalCuenta = Number(cuenta.value)
     const porcentajPropina = Number(propina.value) / 100;
+    const cantidadPersonas = Number(personas.value);
+
     const porcentajeTotal = porcentajPropina * totalCuenta;
     const aPagarTotal = totalCuenta + porcentajeTotal;
-    const cantidadPersonas = Number(personas.value);
     const valorPorPersonas = aPagarTotal / cantidadPersonas;
-    
-    console.log(aPagarTotal, cantidadPersonas, valorPorPersonas);
+    const $$fieldset = document.getElementsByTagName('fieldset')[0];
+    $$fieldset.innerHTML = `<div>
+                <h2>Total a Pagar: ${aPagarTotal}€</h2>
+                <h3>Propina: ${porcentajeTotal}€</h3>
+                <h4>Por persona: ${valorPorPersonas}€</h4>
+            </div>
+            <button class="reset">Volver a Calcular</button>`;
+    const $$reset = document.getElementsByClassName('reset')[0];
+    $$reset.addEventListener('click', event => {
+        event.preventDefault();
+        location.reload();
+    });
 
 }
 
-$form.addEventListener('submit', calcularTotalPorPersona)
+$form.addEventListener('submit', calcularTotalPorPersona);
 
 
 
