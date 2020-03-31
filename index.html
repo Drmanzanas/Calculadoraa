@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Calculador de Propina</title>
+</head>
+<body>
+    <main>
+        <form action="#">
+            <fieldset>
+                <legend>Calculadora de Propina</legend>
+                <label for="amount">¿Cuanto fue la cuenta?</label>
+                <input type="number" name="amount" id="amount" placeholder="Valor de la cuenta" min="0">
+                <label for="service">Valora el servicio de 1 a 5</label>
+                <select name="service" id="service">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                </select>
+                <label for="people">¿Cuantas personas comparten la cuenta?</label>
+                <input type="number" id="people" name="people" placeholder="Cantidad de personas" min="1">
+                <label for="propina">Porcentaje de propina</label>
+                <input type="number" id="propina" name="propina" placeholder="Pon un porcentaje" min="0" max="100">
+                <button>Calcular</button>
+            </fieldset>
+        </form>
+    </main>
+</body>
+<script src="script.js"></script>
+</html>
