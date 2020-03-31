@@ -95,7 +95,7 @@ button {
     margin: 0;
     border-color: black;
     color: black;
-    font-size: var(--main-font-size);
+    font-size: var(--secondary-font-size);
 }
 
 button:hover {
@@ -106,6 +106,7 @@ button:hover {
 h2, h3, h4 {
     font-family: var(--main-font-family);
     color: var(--terciary-bg-color);
+    text-align: center;
 }
 
 h2 {
@@ -128,4 +129,5 @@ h3,h4 {
     select {
         width: 60vw;
     }
+    
 }
